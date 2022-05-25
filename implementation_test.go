@@ -20,7 +20,7 @@ func (ms *MySuite) TestCalculatePrefix1(c *C) {
 
 func (ms *MySuite) TestCalculatePrefix2(c *C) {
 	res, err := CalculatePrefix("* - 13 -5 ^ 2 3")
-	c.Assert(res, Equals, "14")
+	c.Assert(res, Equals, "144")
 	c.Assert(err, IsNil)
 }
 
