@@ -57,7 +57,7 @@ func (ms *MySuite) TestComputeExp3(c *C) {
 func (ms *MySuite) TestComputeExp4(c *C) {
 	var buf bytes.Buffer
 	ch := &ComputeHandler{
-		Input:  strings.NewReader("d/ 2 3"),
+		Input:  strings.NewReader("d / 2 3"),
 		Output: &buf,
 	}
 
