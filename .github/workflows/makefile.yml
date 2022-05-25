@@ -1,0 +1,23 @@
+name: Project CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      
+    - name: Install dependencies
+      run: make
+      
+    - name: Testing
+      run: make test
+      
+    - name: Building
+      run: make out/example
+      
+    - name: Cleaning
+      run: make clean
