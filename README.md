@@ -1,16 +1,28 @@
-_Лабораторна робота No2 з курсу "Архітектура програмного забезпечення"_
----
+# Math expressions solver
+Program works with the prefix form of mathematical expressions  
 
-**Тема**: Безперервна інтеграція та автоматизація тестування
+To run program use:
+```
+go run ./cmd/example
+```
+with some flags:
+```
+ -e "- 4 2"         - read expression from cli
+ -f inputFile.txt   - read expression from file
+ -o outputFile.txt  - output file for expression result
+```
 
-**Мета**: Реалізація практики безперервної інтеграції, закріплення навичок використання
-патерна ін’єкції залежностей для спрощення тестування
+```
+Input:                            Output:
+/ * + 0.5 1.5 7 8                 1.75
++ 2 / 31.35 * 5 + - 5 3 ^ 5 4     2.01
++ 10 9 6                          expression syntax error
+h 9 6                             undefined symbol
+```
 
-**Варіант**: 4
-
-Тести працюють:  
+Tests work out:  
 https://github.com/SoftArch-by-gods/math-expressions-solver/actions/runs/2386188659  
-Тести впали:  
+Tests dropped:  
 https://github.com/SoftArch-by-gods/math-expressions-solver/actions/runs/2386195017  
-Тестування pull request:  
+Testing pull request:  
 https://github.com/SoftArch-by-gods/math-expressions-solver/actions/runs/2386215712
